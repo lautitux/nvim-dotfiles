@@ -1,12 +1,5 @@
 return {
   {
-    "nyoom-engineering/oxocarbon.nvim",
-    config = function()
-      vim.opt.background = "dark"
-      vim.cmd "colorscheme oxocarbon"
-    end
-  },
-  {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = { signs = false }
