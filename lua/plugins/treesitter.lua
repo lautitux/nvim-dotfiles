@@ -17,7 +17,11 @@ return {
           local max_file_size = 100 * 1024 -- 100 KiB
           local ok, stat = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
           if ok and stat and stat.size > max_file_size then
-            print("File larger than "..tostring(max_file_size / 1024).."KiB treesitter disabled for performance.")
+            vim.notify(
+              "File larger than "..tostring(max_file_size / 1024).."KiB treesitter disabled for performance.",
+              vim.log.levels.WARN,
+              { title = "Treesitter" }
+            )
             return true
           end
           return false
