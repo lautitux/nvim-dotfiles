@@ -6,7 +6,7 @@ return {
     treesitter.setup {
       ensure_installed = {
         "vimdoc", "c", "cpp", "lua", "rust",
-        "typst", "python", "dart",
+        "typst", "python", "dart", "haskell",
       },
       sync_install = false,
       auto_install = true,
