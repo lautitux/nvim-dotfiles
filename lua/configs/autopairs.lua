@@ -4,4 +4,4 @@ local npairs = require "nvim-autopairs"
 npairs.setup {}
 
 -- Typst
-npairs.add_rule(rule("$", "$"), "typ")
+npairs.add_rule(rule("$", "$", "typ"))
